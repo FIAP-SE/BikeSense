@@ -1,0 +1,36 @@
+.blv-projeto-header {
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    padding: 5px 50px 0 30px;
+}
+
+.blv-projeto-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blv-projeto-header-logo {
+    margin-left: 20px;
+}
+
+.blv-projeto-header-logo img {
+    width: 120px;
+}
+
+.blv-projeto-header-nav {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+
+.blv-projeto-nav {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px; 
+}
+
+.blv-projeto-nav:hover {
+    color: #868686;
+}
