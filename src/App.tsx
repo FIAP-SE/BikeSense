@@ -7,6 +7,7 @@ import Amigos from "./pages/Amigos/Amigos";
 import Mural from "./pages/Mural/Mural";
 import Pedalar from "./pages/Pedalar/Pedalar";
 import CriarGrupo from "./pages/Criar Grupo/CriarGrupo";
+import GrupoDetalhes from "./pages/Grupo Detalhes/GrupoDetalhes";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <Route path="/Mural" element={<Mural />} />
         <Route path="/Pedalar" element={<Pedalar />} />
         <Route path="/CriarGrupo" element={<CriarGrupo />} />
-
+        <Route path="/GrupoDetalhes" element={<GrupoDetalhes />} />
       </Routes>
     </Router>
   );
