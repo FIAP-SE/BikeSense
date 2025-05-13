@@ -1,7 +1,106 @@
-body{
-    background-color: #247C71;
+.home-container{
+    background-color: #267b74;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    font-weight: 400;
+    text-align: center;
 }
 
-.home-container{
-    color: #ffffff;
+.bike-sense-logo{
+    width: 20rem;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0rem;
+}
+
+.home-content{
+    margin-top: -5rem;
+    font-size: 1rem;
+}
+
+.home-card-content{
+    margin-top: 2rem;
+    background-color: #ffffff;
+    border-radius: 4rem;
+    padding: 3rem;
+    width: 22rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.card-text{
+    color: #696969;
+    font-size: 1.4rem;
+}
+
+
+.home-card-options{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;;
+    transition: transform 0.2s ease;
+    margin: 0.5rem;
+    gap: 0.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.button:hover {
+    transform: scale(1.03);
+}
+.route{ 
+   background-color: #b7e1a1;
+}
+
+.friends {
+    background-color: #00b3d7;
+}
+
+.mural {
+    background-color: #9aa9db;
+}
+
+.icons{
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute; 
+    left: 1rem;
+}
+
+.icons-card{
+    margin-right: 0.5rem; 
+}
+
+.location{
+    color: #b60000;
+}
+
+.sun{
+    color: yellow;
+}
+
+.leaf{
+    color: #2d9130;
 }
