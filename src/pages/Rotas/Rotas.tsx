@@ -17,45 +17,53 @@ const Rotas: React.FC = () => {
   };
 
   return (
-    <div className="routes-container">
+    <div className="routes-container-header">
       <ProjectHeader />
-      <div className="routes-leftside">
-        <img src={bikeSenseLogo} alt="Bike Sense Logo" className="bike-sense-logo" />
-        <div className="routes-left-card">
-          <form className="route-form" onSubmit={handleSubmit}>
-            <h2>Encontre sua rota ideal</h2>
 
-            <input
-              type="text"
-              placeholder="De onde você sai?"
-              value={start}
-              onChange={(e) => setStart(e.target.value)}
-            />
+      <div className="routes-container">
+        <div className="routes-leftside">
+          <img src={bikeSenseLogo} alt="Bike Sense Logo" className="bike-sense-logo" />
+          <div className="routes-left-card">
+            <form className="route-form" onSubmit={handleSubmit}>
+              <h2>Encontre sua rota ideal</h2>
 
-            <input
-              type="text"
-              placeholder="Para onde quer ir?"
-              value={end}
-              onChange={(e) => setEnd(e.target.value)}
-            />
+              <input
+                type="text"
+                placeholder="De onde você sai?"
+                value={start}
+                onChange={(e) => setStart(e.target.value)}
+              />
 
-            <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
-              <option value="">Dificuldade da rota</option>
-              <option value="facil">Fácil</option>
-              <option value="media">Média</option>
-              <option value="dificil">Difícil</option>
-            </select>
+              <input
+                type="text"
+                placeholder="Para onde quer ir?"
+                value={end}
+                onChange={(e) => setEnd(e.target.value)}
+              />
 
-            <select value={routeType} onChange={(e) => setRouteType(e.target.value)}>
-              <option value="">Tipo de trajeto</option>
-              <option value="urbano">Urbano</option>
-              <option value="trilha">Trilha</option>
-              <option value="misto">Misto</option>
-            </select>
+              <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+                <option value="">Dificuldade da rota</option>
+                <option value="facil">Fácil</option>
+                <option value="media">Média</option>
+                <option value="dificil">Difícil</option>
+              </select>
 
-            <button type="submit">Buscar rotas</button>
-          </form>
+              <select value={routeType} onChange={(e) => setRouteType(e.target.value)}>
+                <option value="">Tipo de trajeto</option>
+                <option value="urbano">Urbano</option>
+                <option value="trilha">Trilha</option>
+                <option value="misto">Misto</option>
+              </select>
+
+              <button type="submit">Buscar rotas</button>
+            </form>
+          </div>
+          
+
         </div>
+        <div className="routes-rightside">
+            <h1>teste</h1>
+          </div>
 
       </div>
 

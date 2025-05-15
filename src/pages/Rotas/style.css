@@ -1,4 +1,4 @@
-.routes-container{
+.routes-container-header{
     background-color: #267b74;
     min-height: 100vh;
     color: white;
@@ -8,9 +8,14 @@
     text-align: center;
 }
 
+.routes-container{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
 
 .route-form {
-    background-color: white;
+    background-color: #ffffff;
     padding: 24px;
     border-radius: 16px;
     max-width: 400px;
