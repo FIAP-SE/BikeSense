@@ -2,35 +2,43 @@
 
 body {
   font-family: 'Inter', sans-serif;
-}
-
-.bike-sense-logo {
-  width: 20rem;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 0rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #267b74;
 }
 
 .criar-grupo-container {
   background-color: #267b74;
-  min-height: 100vh;
   color: white;
-  font-family: 'Inter', sans-serif;
-  padding: 2rem;
   font-weight: 400;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content-wrapper {
-  max-width: 600px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bike-sense-logo {
+  width: 15rem;
   margin: 0 auto;
 }
 
 .intro-text {
-  margin-top: 0.5rem;      
-  margin-bottom: 5rem;       
-  font-size: 2.25rem;
-  line-height: 1.2;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
 }
 
 .botao-criar {
@@ -45,6 +53,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 25rem;
+  max-width: 25rem;
 }
 
 .botao-criar:hover {
@@ -52,34 +61,46 @@ body {
 }
 
 .lista-title {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: left;
+  color: white;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .grupo-card {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   background-color: #246159;
   border-radius: 25px;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grupo-info {
   text-align: left;
+  flex: 1 1 60%;
+  color: white;
 }
 
 .grupo-info > strong {
-  font-size: 1.25rem;
   display: block;
   margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
 }
 
 .grupo-info p {
   margin: 0.25rem 0;
+  color: white;
+}
+
+p > strong {
+  color: white;
 }
 
 .grupo-extra {
@@ -87,11 +108,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  flex: 1 1 30%;
+  text-align: right;
+  color: white;
 }
 
 .comentario {
   font-size: 0.85rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .ver-mais {
