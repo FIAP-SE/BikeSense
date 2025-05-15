@@ -30,7 +30,7 @@ const CriarGrupo: React.FC = () => {
           crie seu próprio grupo.
         </h2>
 
-        <Link to="/criar-novo-grupo">
+        <Link to="/CriarNovoGrupo">
           <button className="botao-criar">CRIAR GRUPO</button>
         </Link>
 

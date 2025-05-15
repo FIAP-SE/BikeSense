@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.novo-grupo-container {
+  background-color: #267b74;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.novo-grupo-logo {
+  width: 12rem;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.novo-grupo-voltar {
+  display: block;
+  color: white;
+  text-align: left;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 0;
+}
+
+.novo-grupo-subtitulo {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.novo-grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  gap: 0.75rem;
+}
+
+.novo-grupo-formulario input,
+.novo-grupo-formulario textarea {
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.novo-grupo-formulario textarea {
+  height: 100px;
+  resize: none;
+}
+
+.novo-grupo-formulario button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #00c6ed;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.novo-grupo-formulario button:hover {
+  background-color: #00acc1;
+}

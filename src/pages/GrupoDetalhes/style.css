@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .grupo-detalhes-container {
   background-color: #267b74;
   min-height: 100vh;
@@ -5,12 +7,12 @@
   font-family: 'Inter', sans-serif;
   padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo {
-  width: 12rem;
-  margin: 0 auto 1rem;
-  display: block;
+  width: 10%;
+  height: 20%;
 }
 
 .voltar-link {
@@ -46,11 +48,6 @@
   object-fit: cover;
   object-position: left center;
 }
-
-p > strong {
-  color: black;
-}
-
 
 .grupo-conteudo {
   display: flex;
@@ -105,6 +102,14 @@ p > strong {
   background-color: #00acc1;
 }
 
+.grupo-info {
+  color: black;
+}
+
 body {
+  font-family: 'Inter', sans-serif;
+}
+
+.grupo-detalhes-body {
   overflow: hidden;
 }

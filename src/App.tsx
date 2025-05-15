@@ -6,6 +6,7 @@ import Rotas from "./pages/Rotas/Rotas";
 import Amigos from "./pages/Amigos/Amigos";
 import Mural from "./pages/Mural/Mural";
 import CriarGrupo from "./pages/CriarGrupo/CriarGrupo";
+import CriarNovoGrupo from "./pages/CriarNovoGrupo/CriarNovoGrupo";
 import GrupoDetalhes from "./pages/GrupoDetalhes/GrupoDetalhes";
 import NovoPost from './pages/NovoPost';
 import Participar from './pages/Participar';
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/Mural" element={<Mural />} />
         <Route path="/CriarGrupo" element={<CriarGrupo />} />
         <Route path="/GrupoDetalhes" element={<GrupoDetalhes />} />
+        <Route path="/CriarNovoGrupo" element={<CriarNovoGrupo />} />
         <Route path="/NovoPost" element={<NovoPost/>} />
         <Route path="/Participar" element={<Participar/>} />
 
