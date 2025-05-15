@@ -47,6 +47,9 @@
   object-position: left center;
 }
 
+p > strong {
+  color: black;
+}
 
 
 .grupo-conteudo {
@@ -100,4 +103,8 @@
 
 .botao-participar:hover {
   background-color: #00acc1;
+}
+
+body {
+  overflow: hidden;
 }
