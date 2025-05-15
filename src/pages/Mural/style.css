@@ -1,0 +1,110 @@
+*{
+  color: black;
+}
+
+.mural-container {
+    background-color: #267b74;
+    /* min-height: 100vh; */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .mural-header {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    mix-blend-mode: color black;
+    }
+  
+  .mural-header-up{
+    background-color: #267b74;
+    width: 100%;
+    border-radius: 25px;
+  }
+   
+    
+  .logo-image {
+    width: 100px;
+    margin-bottom: 10px;
+
+  }
+  
+  .create-post-btn {
+    background-color: #a3bdf7;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .post {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  .quote {
+    font-style: italic;
+    margin: 10px 0;
+  }
+  
+  .observacao {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .post-actions button {
+    background: none;
+    border: none;
+    color: #407c74;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
