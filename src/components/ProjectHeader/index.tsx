@@ -18,7 +18,10 @@ export default function ProjectHeader() {
                         <Link className="blv-projeto-nav" to={"/Rotas"}>Rotas</Link>
                         <Link className="blv-projeto-nav" to={"/Amigos"}>Amigos</Link>
                         <Link className="blv-projeto-nav" to={"/Mural"}>Mural</Link>
-                        <Link className="blv-projeto-nav" to={"/Pedalar"}>Pedalar</Link>
+                        <Link className="blv-projeto-nav" to={"/NovoPost"}>NovoPost</Link>
+                        <Link className="blv-projeto-nav" to={"/Participar"}>Participar</Link>
+
+
                     </nav>
                 </div>
             </div>
