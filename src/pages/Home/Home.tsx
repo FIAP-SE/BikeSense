@@ -25,15 +25,12 @@ export default function Home() {
           <div className="home-card">
 
             <div className="home-card-content">
-              <h1>
-                <FontAwesomeIcon icon={faLocationDot} className="icons-card location" />
-                <span className="card-text">Tatuapé, SP </span>
-                <FontAwesomeIcon icon={faSun} className="icons-card sun" />
-                <span className="card-text">25ºC</span>
-                <FontAwesomeIcon icon={faLeaf} className="icons-card leaf" />
-                <span className="card-text">Boa</span>
-              </h1>
-              
+              <FontAwesomeIcon icon={faLocationDot} className="icons-card location" />
+              <span className="card-text">Tatuapé, SP </span>
+              <FontAwesomeIcon icon={faSun} className="icons-card sun" />
+              <span className="card-text">25ºC</span>
+              <FontAwesomeIcon icon={faLeaf} className="icons-card leaf" />
+              <span className="card-text">Boa</span>
             </div>
 
             <div className="home-card-options">

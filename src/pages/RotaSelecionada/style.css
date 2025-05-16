@@ -1,0 +1,37 @@
+.routes-container-header{
+    min-height: 100vh;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.routes-container {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.bike-sense-logo {
+  width: 25rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.route-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

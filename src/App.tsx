@@ -9,6 +9,7 @@ import CriarGrupo from "./pages/Criar Grupo/CriarGrupo";
 import GrupoDetalhes from "./pages/Grupo Detalhes/GrupoDetalhes";
 import NovoPost from './pages/NovoPost';
 import Participar from './pages/Participar';
+import RotaSelecionada from './pages/RotaSelecionada/RotaSelecionada';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
         <Route path="/GrupoDetalhes" element={<GrupoDetalhes />} />
         <Route path="/NovoPost" element={<NovoPost/>} />
         <Route path="/Participar" element={<Participar/>} />
-
+        <Route path="/RotaSelecionada" element={<RotaSelecionada />} />
       </Routes>
     </Router>
   );

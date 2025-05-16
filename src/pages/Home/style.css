@@ -1,12 +1,13 @@
 .home-container{
     background-color: #267b74;
     min-height: 100vh;
-    color: white;
     font-family: 'Inter', sans-serif;
     padding: 2rem;
     font-weight: 400;
     text-align: center;
+    color: white;
 }
+
 
 .bike-sense-logo{
     width: 20rem;
@@ -20,6 +21,10 @@
     font-size: 1rem;
 }
 
+.home-content p{
+    color: white;
+}
+
 .home-card-content{
     margin-top: 2rem;
     background-color: #ffffff;
@@ -29,12 +34,11 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    
 }
 
 .card-text{
     color: #696969;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 
@@ -44,6 +48,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.home-card-options p{
+    color: white;
 }
 
 .button {
@@ -90,7 +98,10 @@
 }
 
 .icons-card{
-    margin-right: 0.5rem; 
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .location{
@@ -98,7 +109,7 @@
 }
 
 .sun{
-    color: yellow;
+    color: rgb(255, 213, 0);
 }
 
 .leaf{

@@ -2,6 +2,8 @@ import React, { useState } from 'react';import "./style.css"
 import { Link } from "react-router-dom";
 import ProjectHeader from "../../components/ProjectHeader";
 import bikeSenseLogo from "../../img/bike_sense.png";
+import BikeRouteCard from '../../components/BikeRouteCard/BikeRouteCard';
+import { bikeRoutes } from '../../components/BikeRouteData/BikeRouteData';
 
 
 const Rotas: React.FC = () => {
@@ -20,7 +22,7 @@ const Rotas: React.FC = () => {
     <div className="routes-container-header">
       <ProjectHeader />
 
-      <div className="routes-container">
+      <div className="routes-container-route">
         <div className="routes-leftside">
           <img src={bikeSenseLogo} alt="Bike Sense Logo" className="bike-sense-logo" />
           <div className="routes-left-card">
@@ -59,11 +61,12 @@ const Rotas: React.FC = () => {
             </form>
           </div>
           
-
         </div>
         <div className="routes-rightside">
-            <h1>teste</h1>
-          </div>
+            {bikeRoutes.map((route, index) => (
+              <BikeRouteCard key={index} route={route} />
+            ))}
+        </div>
 
       </div>
 
