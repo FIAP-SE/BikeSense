@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProjectHeader from "../../components/ProjectHeader";
 import "./style.css";
 import bikeSenseLogo from "../../img/bike_sense.png";
@@ -35,18 +36,18 @@ export default function Home() {
 
             <div className="home-card-options">
               <p>Escolha uma das opções abaixo</p>
-              <button className="button route">
+              <Link to="/Rotas" style={{ textDecoration: 'none' }}><button className="button route">
                   <FontAwesomeIcon icon={faMapLocationDot} className="icons" />
                 BUSCAR UMA ROTA
-                </button>
-              <button className="button friends">
+                </button> </Link>
+              <Link to="/CriarGrupo" style={{ textDecoration: 'none' }}><button className="button friends">
                 <FontAwesomeIcon icon={faUsers} className="icons"  />
                 PEDALAR COM AMIGOS
-                </button>
-              <button className="button mural">
+                </button> </Link>
+              <Link to="/Mural" style={{ textDecoration: 'none' }}><button className="button mural">
                 <FontAwesomeIcon icon={faChartBar} className="icons"  />
                 VER MURAL
-                </button>
+                </button> </Link>
 
             </div>
 

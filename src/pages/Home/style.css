@@ -18,7 +18,7 @@
 
 .home-content{
     margin-top: -5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .home-content p{
@@ -29,7 +29,7 @@
     margin-top: 2rem;
     background-color: #ffffff;
     border-radius: 4rem;
-    padding: 3rem;
+    padding: 4rem;
     width: 22rem;
     display: flex;
     justify-content: center;
@@ -48,6 +48,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 1.5rem;
 }
 
 .home-card-options p{
@@ -101,7 +102,6 @@
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     font-size: 1.5rem;
-    color: white;
 }
 
 .location{
