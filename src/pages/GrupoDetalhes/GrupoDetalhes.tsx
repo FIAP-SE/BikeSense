@@ -1,4 +1,3 @@
-// GrupoDetalhes.tsx
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -20,13 +19,13 @@ const GrupoDetalhes: React.FC = () => {
         <div className="grupo-conteudo">
           <div className="grupo-info-detalhes">
             <strong>Nome do Grupo</strong>
-            <p><strong>Dia:</strong></p>
-            <p><strong>Horário:</strong></p>
-            <p><strong>Origem:</strong></p>
-            <p><strong>Destino:</strong></p>
-            <p><strong>Nível:</strong> Iniciante</p>
-            <p><strong>Tipo:</strong> Urbano</p>
-            <p><strong>Comentários:</strong> xxxx</p>
+            <p><strong className="grupo-info">Dia:</strong></p>
+            <p><strong className="grupo-info">Horário:</strong></p>
+            <p><strong className="grupo-info">Origem:</strong></p>
+            <p><strong className="grupo-info">Destino:</strong></p>
+            <p><strong className="grupo-info">Nível:</strong> Iniciante</p>
+            <p><strong className="grupo-info">Tipo:</strong> Urbano</p>
+            <p><strong className="grupo-info">Comentários:</strong> xxxx</p>
           </div>
 
           <div className="grupo-participantes">
