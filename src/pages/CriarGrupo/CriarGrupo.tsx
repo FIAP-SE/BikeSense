@@ -2,13 +2,49 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import ProjectHeader from "../../components/ProjectHeader";
-import bikeSenseLogo from "../../img/bike_sense.png";
+import bikeSenseLogo from "../../img/logo_bike_sense.png";
 
 const grupos = [
-  { nome: "Grupo 1", nivel: "Nivel1", tipo: "Tipo1", comentario: "lorem ipsum" },
-  { nome: "Grupo 2", nivel: "Nivel2", tipo: "Tipo2", comentario: "lorem ipsum" },
-  { nome: "Grupo 3", nivel: "Nivel3", tipo: "Tipo3", comentario: "lorem ipsum" },
-  { nome: "Grupo 4", nivel: "Nivel4", tipo: "Tipo4", comentario: "lorem ipsum" },
+  {
+    nome: "Pedal da Madrugada",
+    origem: "Praça Central",
+    destino: "Mirante do Vale",
+    dia: "Sábado",
+    horario: "05:30",
+    nivel: "Intenso",
+    tipo: "Urbano",
+    comentario: "Pedal voltado para quem curte desafios logo cedo!"
+  },
+  {
+    nome: "Trilha Leve",
+    origem: "Parque das Árvores",
+    destino: "Cachoeira Azul",
+    dia: "Domingo",
+    horario: "09:00",
+    nivel: "Leve",
+    tipo: "Trilha",
+    comentario: "Ideal para iniciantes e famílias."
+  },
+  {
+    nome: "Pedal Noturno",
+    origem: "Estação Norte",
+    destino: "Centro Histórico",
+    dia: "Quarta-feira",
+    horario: "20:00",
+    nivel: "Moderado",
+    tipo: "Urbano",
+    comentario: "Passeio tranquilo com paradas culturais."
+  },
+  {
+    nome: "Exploradores de Rotas",
+    origem: "Praia do Sol",
+    destino: "Fazenda Rio Verde",
+    dia: "Sexta-feira",
+    horario: "07:00",
+    nivel: "Avançado",
+    tipo: "Misto",
+    comentario: "Percurso longo e misto com belas paisagens."
+  },
 ];
 
 const CriarGrupo: React.FC = () => {
@@ -40,10 +76,10 @@ const CriarGrupo: React.FC = () => {
           <div className="grupo-card" key={index}>
             <div className="grupo-info">
               <strong>{grupo.nome}</strong>
-              <p><strong>Origem:</strong></p>
-              <p><strong>Destino:</strong></p>
-              <p><strong>Dia:</strong></p>
-              <p><strong>Horário:</strong></p>
+              <p><strong>Origem:</strong> {grupo.origem}</p>
+              <p><strong>Destino:</strong> {grupo.destino}</p>
+              <p><strong>Dia:</strong> {grupo.dia}</p>
+              <p><strong>Horário:</strong> {grupo.horario}</p>
               <p><strong>Nível:</strong> {grupo.nivel}</p>
               <p><strong>Tipo:</strong> {grupo.tipo}</p>
             </div>

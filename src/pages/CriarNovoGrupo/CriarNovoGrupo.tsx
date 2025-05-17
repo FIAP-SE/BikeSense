@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import ProjectHeader from "../../components/ProjectHeader";
-import bikeSenseLogo from "../../img/bike_sense.png";
+import bikeSenseLogo from "../../img/logo_bike_sense.png";
 
 const CriarNovoGrupo: React.FC = () => {
   return (
@@ -24,14 +24,34 @@ const CriarNovoGrupo: React.FC = () => {
         <form className="novo-grupo-formulario">
           <input type="text" placeholder="Origem" />
           <input type="text" placeholder="Destino" />
-          <input type="text" placeholder="Nível de dificuldade" />
-          <input type="text" placeholder="Tipo de trajeto" />
-          <input type="text" placeholder="Dia" />
-          <input type="text" placeholder="Horário" />
+
+          <select defaultValue="" required>
+            <option value="" disabled>
+              Nível de dificuldade
+            </option>
+            <option value="Leve">Leve</option>
+            <option value="Moderado">Moderado</option>
+            <option value="Intenso">Intenso</option>
+            <option value="Avançado">Avançado</option>
+          </select>
+
+          <select defaultValue="" required>
+            <option value="" disabled>
+              Tipo de trajeto
+            </option>
+            <option value="Urbano">Urbano</option>
+            <option value="Trilha">Trilha</option>
+            <option value="Misto">Misto</option>
+            <option value="Ciclovia">Ciclovia</option>
+          </select>
+
+          <input type="date" lang="pt-BR" placeholder="dd/mm/aaaa"/>
+          <input type="time" lang="pt-BR" step="60"/>
           <input type="text" placeholder="Nome do Grupo" />
           <textarea placeholder="Comentários"></textarea>
-          <button type="submit">CRIAR GRUPO</button>
         </form>
+
+        <button className="botao-criar-grupo">CRIAR GRUPO</button>
       </div>
     </>
   );
