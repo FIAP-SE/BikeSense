@@ -9,7 +9,7 @@ const NovoPost:React.FC = () => {
         <ProjectHeader />
         
     <div className="novo-post-container">
-      <img src={logo} alt="Logo" className="logo" />
+      <img src={logo} alt="Logo" className="logo11" />
       <div className="form-box">
         <h2>Novo Post</h2>
         <form>
