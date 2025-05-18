@@ -10,16 +10,15 @@
   overflow: hidden;
 }
 
-.logo {
-  width: 10%;
-  height: 20%;
+.logo-detalhes {
+  width: 300px;
 }
 
 .voltar-link {
   display: block;
   color: white;
-  text-align: left;
   margin: 0.5rem 0 1rem 0;
+  margin-right: 50rem;
   font-size: 0.9rem;
   text-decoration: none;
 }
