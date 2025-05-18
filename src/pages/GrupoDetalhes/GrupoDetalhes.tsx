@@ -15,6 +15,8 @@ const GrupoDetalhes: React.FC = () => {
     return null;
   }
 
+  const novoParticipante = grupo.novoParticipante;
+
   const formatarDataCompleta = (dataISO: string) => {
     const diasSemana = [
       "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira",
@@ -29,11 +31,22 @@ const GrupoDetalhes: React.FC = () => {
     return `${diaSemana} (${dataFormatada})`;
   };
 
+  const participantesFixos = [
+    { nome: "Carla Mendes" },
+    { nome: "João Ferreira" },
+    { nome: "Bruno Alves" },
+    { nome: "Juliana Rocha" }
+  ];
+
+  const todosParticipantes = novoParticipante
+    ? [...participantesFixos, novoParticipante]
+    : participantesFixos;
+
   return (
     <div className="grupo-detalhes-container">
       <ProjectHeader />
       <img src={bikeSenseLogo} alt="Bike Sense Logo" className="logo-detalhes" />
-      
+
       <span className="voltar-link" onClick={() => navigate(-1)}>
         &lt; voltar
       </span>
@@ -58,15 +71,19 @@ const GrupoDetalhes: React.FC = () => {
           <div className="grupo-participantes">
             <strong>Participantes</strong>
             <ul>
-              <li><span className="dot green"></span> Carla Mendes</li>
-              <li><span className="dot green"></span> João Ferreira</li>
-              <li><span className="dot green"></span> Bruno Alves</li>
-              <li><span className="dot green"></span> Juliana Rocha</li>
+              {todosParticipantes.map((p, index) => (
+                <li key={index}>
+                  <span className="dot green"></span> {p.nome}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <button className="botao-participar" onClick={() => navigate("/Participar")}>
+        <button
+          className="botao-participar"
+          onClick={() => navigate("/Participar", { state: grupo })}
+        >
           PARTICIPAR
         </button>
       </div>

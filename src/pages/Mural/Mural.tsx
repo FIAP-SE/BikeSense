@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import logo from '../../img/bike_sense.png';
 import trailPhoto from '../../img/fundo_banner.png';
-import avatar from '../../img/bike_sense.png'; // até você trocar por imagem de avatar real
+import avatar from '../../img/bike_sense.png';
 import ProjectHeader from '../../components/ProjectHeader';
 import bikeSenseLogo from "../../img/bike_sense.png";
 

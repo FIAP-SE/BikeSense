@@ -15,7 +15,6 @@ const Rotas: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log({ start, end, difficulty, routeType });
-    // Aqui você pode integrar com uma API ou lógica de busca
   };
 
   return (
