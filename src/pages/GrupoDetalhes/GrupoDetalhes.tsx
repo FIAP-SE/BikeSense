@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import ProjectHeader from "../../components/ProjectHeader";
-import bikeSenseLogo from "../../img/bike_sense.png";
+import bikeSenseLogo from "../../img/logo_bike_sense.png";
 import banner from "../../img/fundo_banner.png";
 
 const GrupoDetalhes: React.FC = () => {
@@ -15,15 +15,28 @@ const GrupoDetalhes: React.FC = () => {
     return null;
   }
 
+  const formatarDataCompleta = (dataISO: string) => {
+    const diasSemana = [
+      "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira",
+      "Quinta-feira", "Sexta-feira", "Sábado"
+    ];
+
+    const [ano, mes, dia] = dataISO.split("-");
+    const data = new Date(`${ano}-${mes}-${dia}`);
+    const diaSemana = diasSemana[data.getDay()];
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+
+    return `${diaSemana} (${dataFormatada})`;
+  };
+
   return (
     <div className="grupo-detalhes-container">
       <ProjectHeader />
       <img src={bikeSenseLogo} alt="Bike Sense Logo" className="logo-detalhes" />
+      
       <span className="voltar-link" onClick={() => navigate(-1)}>
-  &lt; voltar
-</span>
-
-
+        &lt; voltar
+      </span>
 
       <div className="grupo-card-detalhes">
         <div className="grupo-banner-wrapper">
@@ -33,7 +46,7 @@ const GrupoDetalhes: React.FC = () => {
         <div className="grupo-conteudo">
           <div className="grupo-info-detalhes">
             <strong>{grupo.nomeGrupo}</strong>
-            <p><strong className="grupo-info">Dia:</strong> {grupo.data}</p>
+            <p><strong className="grupo-info">Dia:</strong> {formatarDataCompleta(grupo.data)}</p>
             <p><strong className="grupo-info">Horário:</strong> {grupo.horario}</p>
             <p><strong className="grupo-info">Origem:</strong> {grupo.origem}</p>
             <p><strong className="grupo-info">Destino:</strong> {grupo.destino}</p>
@@ -54,9 +67,8 @@ const GrupoDetalhes: React.FC = () => {
         </div>
 
         <button className="botao-participar" onClick={() => navigate("/Participar")}>
-  PARTICIPAR
-</button>
-
+          PARTICIPAR
+        </button>
       </div>
     </div>
   );

@@ -10,73 +10,63 @@ const CriarGrupo: React.FC = () => {
   const novoGrupo = location.state;
 
   const obterDiaSemana = (data: string) => {
-    const dias = [
-      "Domingo",
-      "Segunda-feira",
-      "Terça-feira",
-      "Quarta-feira",
-      "Quinta-feira",
-      "Sexta-feira",
-      "Sábado"
-    ];
+    const dias = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
     const date = new Date(data);
-    return dias[date.getDay()] || "Data inválida";
+    return dias[date.getDay()];
+  };
+
+  const formatarData = (data: string) => {
+    const [ano, mes, dia] = data.split("-");
+    return `${dia}/${mes}/${ano}`;
   };
 
   const grupos = [
     {
-      nome: "Pedal da Madrugada",
+      nomeGrupo: "Pedal da Madrugada",
       origem: "Praça Central",
       destino: "Mirante do Vale",
-      dia: "Sábado",
+      data: "2025-06-21",
       horario: "05:30",
       nivel: "Intenso",
       tipo: "Urbano",
-      comentario: "Pedal voltado para quem curte desafios logo cedo!"
+      comentarios: "Pedal voltado para quem curte desafios logo cedo!"
     },
     {
-      nome: "Trilha Leve",
+      nomeGrupo: "Trilha Leve",
       origem: "Parque das Árvores",
       destino: "Cachoeira Azul",
-      dia: "Domingo",
+      data: "2025-06-22",
       horario: "09:00",
       nivel: "Leve",
       tipo: "Trilha",
-      comentario: "Ideal para iniciantes e famílias."
+      comentarios: "Ideal para iniciantes e famílias."
     },
     {
-      nome: "Pedal Noturno",
+      nomeGrupo: "Pedal Noturno",
       origem: "Estação Norte",
       destino: "Centro Histórico",
-      dia: "Quarta-feira",
+      data: "2025-06-25",
       horario: "20:00",
       nivel: "Moderado",
       tipo: "Urbano",
-      comentario: "Passeio tranquilo com paradas culturais."
+      comentarios: "Passeio tranquilo com paradas culturais."
     },
     {
-      nome: "Exploradores de Rotas",
+      nomeGrupo: "Exploradores de Rotas",
       origem: "Praia do Sol",
       destino: "Fazenda Rio Verde",
-      dia: "Sexta-feira",
+      data: "2025-06-28",
       horario: "07:00",
       nivel: "Avançado",
       tipo: "Misto",
-      comentario: "Percurso longo e misto com belas paisagens."
+      comentarios: "Percurso longo e misto com belas paisagens."
     }
   ];
 
   const listaGrupos = novoGrupo
     ? [
         {
-          nome: novoGrupo.nomeGrupo,
-          origem: novoGrupo.origem,
-          destino: novoGrupo.destino,
-          dia: obterDiaSemana(novoGrupo.data),
-          horario: novoGrupo.horario,
-          nivel: novoGrupo.nivel,
-          tipo: novoGrupo.tipo,
-          comentario: novoGrupo.comentarios || "Sem comentários adicionais."
+          ...novoGrupo
         },
         ...grupos
       ]
@@ -104,6 +94,7 @@ const CriarGrupo: React.FC = () => {
           crie seu próprio grupo.
         </h2>
 
+        
         <Link to="/CriarNovoGrupo">
           <button className="botao-criar">CRIAR GRUPO</button>
         </Link>
@@ -113,16 +104,16 @@ const CriarGrupo: React.FC = () => {
         {listaGrupos.map((grupo, index) => (
           <div className="grupo-card" key={index}>
             <div className="grupo-info">
-              <strong>{grupo.nome}</strong>
+              <strong>{grupo.nomeGrupo}</strong>
               <p><strong>Origem:</strong> {grupo.origem}</p>
               <p><strong>Destino:</strong> {grupo.destino}</p>
-              <p><strong>Dia:</strong> {grupo.dia}</p>
+              <p><strong>Dia:</strong> {obterDiaSemana(grupo.data)} ({formatarData(grupo.data)})</p>
               <p><strong>Horário:</strong> {grupo.horario}</p>
               <p><strong>Nível:</strong> {grupo.nivel}</p>
               <p><strong>Tipo:</strong> {grupo.tipo}</p>
             </div>
             <div className="grupo-extra">
-              <p className="comentario">Comentário: {grupo.comentario}</p>
+              <p className="comentario">Comentário: {grupo.comentarios}</p>
               <button className="ver-mais" onClick={() => handleVerMais(grupo)}>Ver mais</button>
             </div>
           </div>

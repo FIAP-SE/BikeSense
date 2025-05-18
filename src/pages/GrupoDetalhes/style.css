@@ -2,16 +2,16 @@
 
 .grupo-detalhes-container {
   background-color: #267b74;
-  min-height: 100vh;
   color: #000;
   font-family: 'Inter', sans-serif;
   padding: 2rem;
   text-align: center;
-  overflow: hidden;
+  height: 500px;
 }
 
 .logo-detalhes {
   width: 300px;
+  margin: 0 auto 1rem;
 }
 
 .voltar-link {
@@ -22,6 +22,11 @@
   font-size: 0.9rem;
   text-decoration: none;
 }
+
+.voltar-link:hover {
+  text-decoration: underline;
+}
+
 
 .grupo-card-detalhes {
   background-color: white;

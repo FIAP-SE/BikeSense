@@ -20,7 +20,9 @@ const CriarNovoGrupo: React.FC = () => {
 
   const [erros, setErros] = useState<{ [key: string]: string }>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setErros({ ...erros, [e.target.name]: "" });
   };
@@ -40,7 +42,7 @@ const CriarNovoGrupo: React.FC = () => {
     if (Object.keys(novosErros).length > 0) {
       setTimeout(() => {
         const spans = document.querySelectorAll(".erro-msg");
-        spans.forEach(span => span.classList.add("oculta"));
+        spans.forEach((span) => span.classList.add("oculta"));
       }, 3500);
 
       setTimeout(() => {
@@ -71,17 +73,38 @@ const CriarNovoGrupo: React.FC = () => {
           {"< voltar"}
         </Link>
 
-        <p className="novo-grupo-subtitulo">Insira os dados para criar seu grupo:</p>
+        <p className="novo-grupo-subtitulo">
+          Insira os dados para criar seu grupo:
+        </p>
 
         <form className="novo-grupo-formulario">
-          <input type="text" placeholder="Origem" name="origem" value={form.origem} onChange={handleChange} />
+          <input
+            type="text"
+            placeholder="Origem"
+            name="origem"
+            value={form.origem}
+            onChange={handleChange}
+          />
           {erros.origem && <span className="erro-msg">{erros.origem}</span>}
 
-          <input type="text" placeholder="Destino" name="destino" value={form.destino} onChange={handleChange} />
+          <input
+            type="text"
+            placeholder="Destino"
+            name="destino"
+            value={form.destino}
+            onChange={handleChange}
+          />
           {erros.destino && <span className="erro-msg">{erros.destino}</span>}
 
-          <select name="nivel" value={form.nivel} onChange={handleChange} required>
-            <option value="" disabled>Nível de dificuldade</option>
+          <select
+            name="nivel"
+            value={form.nivel}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Nível de dificuldade
+            </option>
             <option value="Leve">Leve</option>
             <option value="Moderado">Moderado</option>
             <option value="Intenso">Intenso</option>
@@ -89,8 +112,15 @@ const CriarNovoGrupo: React.FC = () => {
           </select>
           {erros.nivel && <span className="erro-msg">{erros.nivel}</span>}
 
-          <select name="tipo" value={form.tipo} onChange={handleChange} required>
-            <option value="" disabled>Tipo de trajeto</option>
+          <select
+            name="tipo"
+            value={form.tipo}
+            onChange={handleChange}
+            required
+          >
+            <option value="" disabled>
+              Tipo de trajeto
+            </option>
             <option value="Urbano">Urbano</option>
             <option value="Trilha">Trilha</option>
             <option value="Misto">Misto</option>
@@ -98,19 +128,47 @@ const CriarNovoGrupo: React.FC = () => {
           </select>
           {erros.tipo && <span className="erro-msg">{erros.tipo}</span>}
 
-          <input type="date" lang="pt-BR" name="data" value={form.data} onChange={handleChange} />
+          <input
+            type="date"
+            lang="pt-BR"
+            name="data"
+            value={form.data}
+            onChange={handleChange}
+          />
           {erros.data && <span className="erro-msg">{erros.data}</span>}
 
-          <input type="time" lang="pt-BR" step="60" name="horario" value={form.horario} onChange={handleChange} />
+          <input
+            type="time"
+            lang="pt-BR"
+            step="60"
+            name="horario"
+            value={form.horario}
+            onChange={handleChange}
+          />
           {erros.horario && <span className="erro-msg">{erros.horario}</span>}
 
-          <input type="text" placeholder="Nome do Grupo" name="nomeGrupo" value={form.nomeGrupo} onChange={handleChange} />
-          {erros.nomeGrupo && <span className="erro-msg">{erros.nomeGrupo}</span>}
+          <input
+            type="text"
+            placeholder="Nome do Grupo"
+            name="nomeGrupo"
+            value={form.nomeGrupo}
+            onChange={handleChange}
+          />
+          {erros.nomeGrupo && (
+            <span className="erro-msg">{erros.nomeGrupo}</span>
+          )}
 
-          <textarea placeholder="Comentários" name="comentarios" value={form.comentarios} onChange={handleChange} />
+          <textarea
+            placeholder="Comentários"
+            name="comentarios"
+            value={form.comentarios}
+            onChange={handleChange}
+          />
         </form>
 
-        <button className="botao-criar-grupo" onClick={handleSubmit}>CRIAR GRUPO</button>
+        <button className="botao-criar-grupo" onClick={handleSubmit}>
+          CRIAR GRUPO
+        </button>
       </div>
     </>
   );
