@@ -27,7 +27,7 @@ const CriarGrupo: React.FC = () => {
       destino: "Mirante do Vale",
       data: "2025-06-21",
       horario: "05:30",
-      nivel: "Intenso",
+      nivel: "Difícil",
       tipo: "Urbano",
       comentarios: "Pedal voltado para quem curte desafios logo cedo!"
     },
@@ -37,7 +37,7 @@ const CriarGrupo: React.FC = () => {
       destino: "Cachoeira Azul",
       data: "2025-06-22",
       horario: "09:00",
-      nivel: "Leve",
+      nivel: "Fácil",
       tipo: "Trilha",
       comentarios: "Ideal para iniciantes e famílias."
     },
@@ -47,7 +47,7 @@ const CriarGrupo: React.FC = () => {
       destino: "Centro Histórico",
       data: "2025-06-25",
       horario: "20:00",
-      nivel: "Moderado",
+      nivel: "Média",
       tipo: "Urbano",
       comentarios: "Passeio tranquilo com paradas culturais."
     },
@@ -57,7 +57,7 @@ const CriarGrupo: React.FC = () => {
       destino: "Fazenda Rio Verde",
       data: "2025-06-28",
       horario: "07:00",
-      nivel: "Avançado",
+      nivel: "Difícil",
       tipo: "Misto",
       comentarios: "Percurso longo e misto com belas paisagens."
     }
@@ -94,7 +94,6 @@ const CriarGrupo: React.FC = () => {
           crie seu próprio grupo.
         </h2>
 
-        
         <Link to="/CriarNovoGrupo">
           <button className="botao-criar">CRIAR GRUPO</button>
         </Link>

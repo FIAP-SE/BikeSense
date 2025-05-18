@@ -27,6 +27,18 @@ const CriarNovoGrupo: React.FC = () => {
     setErros({ ...erros, [e.target.name]: "" });
   };
 
+  const normalizarCampos = () => {
+    let nivel = form.nivel;
+    if (nivel === "Leve") nivel = "Fácil";
+    else if (nivel === "Moderado") nivel = "Média";
+    else if (nivel === "Intenso" || nivel === "Avançado") nivel = "Difícil";
+
+    return {
+      ...form,
+      nivel,
+    };
+  };
+
   const validarFormulario = () => {
     const novosErros: { [key: string]: string } = {};
     if (!form.origem) novosErros.origem = "Informe a origem.";
@@ -55,7 +67,8 @@ const CriarNovoGrupo: React.FC = () => {
 
   const handleSubmit = () => {
     if (validarFormulario()) {
-      navigate("/CriarGrupo", { state: form });
+      const dadosNormalizados = normalizarCampos();
+      navigate("/CriarGrupo", { state: dadosNormalizados });
     }
   };
 
@@ -105,10 +118,9 @@ const CriarNovoGrupo: React.FC = () => {
             <option value="" disabled>
               Nível de dificuldade
             </option>
-            <option value="Leve">Leve</option>
-            <option value="Moderado">Moderado</option>
-            <option value="Intenso">Intenso</option>
-            <option value="Avançado">Avançado</option>
+            <option value="Fácil">Fácil</option>
+            <option value="Média">Média</option>
+            <option value="Difícil">Difícil</option>
           </select>
           {erros.nivel && <span className="erro-msg">{erros.nivel}</span>}
 
@@ -124,7 +136,6 @@ const CriarNovoGrupo: React.FC = () => {
             <option value="Urbano">Urbano</option>
             <option value="Trilha">Trilha</option>
             <option value="Misto">Misto</option>
-            <option value="Ciclovia">Ciclovia</option>
           </select>
           {erros.tipo && <span className="erro-msg">{erros.tipo}</span>}
 

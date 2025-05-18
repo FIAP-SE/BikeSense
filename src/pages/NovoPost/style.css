@@ -1,6 +1,6 @@
 .novo-post-container {
     background-color: #267b74;
-    /* min-height: 100vh; */
+    min-height: 100vh; 
     padding: 40px 20px;
     font-family: Arial, sans-serif;
     display: flex;
@@ -9,9 +9,10 @@
   }
   
   .logo11 {
-    width: 20%;
-    margin-bottom: 20px;
-  }
+    margin-top: 50px;
+    padding-bottom: 50px;
+    width: 15rem;  
+    }
   
   .form-box {
     background-color: white;
