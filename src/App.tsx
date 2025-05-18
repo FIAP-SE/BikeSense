@@ -11,6 +11,7 @@ import GrupoDetalhes from "./pages/GrupoDetalhes/GrupoDetalhes";
 import NovoPost from './pages/NovoPost';
 import Participar from './pages/Participar';
 import RotaSelecionada from './pages/RotaSelecionada/RotaSelecionada';
+import Mapa from './pages/Mapa/Mapa';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/NovoPost" element={<NovoPost/>} />
         <Route path="/Participar" element={<Participar/>} />
         <Route path="/RotaSelecionada" element={<RotaSelecionada />} />
+        <Route path="/Mapa" element={<Mapa />} />
       </Routes>
     </Router>
   );

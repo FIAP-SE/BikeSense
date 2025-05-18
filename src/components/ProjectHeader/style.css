@@ -34,3 +34,7 @@
 .blv-projeto-nav:hover {
     color: #868686;
 }
+
+.blv-projeto-nav:active {
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 150px;
+}
+
+.mapa-image {
+  width: 50%;
+  height: 50%;
+}
+
+.botao-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao-voltar:hover {
+  text-decoration: underline;
+}

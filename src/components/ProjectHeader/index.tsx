@@ -14,14 +14,11 @@ export default function ProjectHeader() {
                 </div>
                 <div className="blv-projeto-header-nav">
                     <nav>
-                        <Link className="blv-projeto-nav" to={"/home"}>Home</Link>
-                        <Link className="blv-projeto-nav" to={"/Rotas"}>Rotas</Link>
-                        <Link className="blv-projeto-nav" to={"/CriarGrupo"}>Amigos</Link>
-                        <Link className="blv-projeto-nav" to={"/Mural"}>Mural</Link>
-                        <Link className="blv-projeto-nav" to={"/NovoPost"}>NovoPost</Link>
-                        <Link className="blv-projeto-nav" to={"/Participar"}>Participar</Link>
-
-
+                        <Link className="blv-projeto-nav" to={"/home"}>HOME</Link>
+                        <Link className="blv-projeto-nav" to={"/Rotas"}>ROTAS</Link>
+                        <Link className="blv-projeto-nav" to={"/CriarGrupo"}>AMIGOS</Link>
+                        <Link className="blv-projeto-nav" to={"/Mural"}>MURAL</Link>
+                        <Link className="blv-projeto-nav" to={"/Mapa"}>PEDALAR</Link>
                     </nav>
                 </div>
             </div>
