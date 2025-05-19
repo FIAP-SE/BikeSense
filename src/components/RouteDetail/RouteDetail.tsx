@@ -2,20 +2,28 @@ import React from "react";
 import "./RouteDetail.css";
 import { BikeRoute } from "../RouteDetailData/RouteDetail";
 import bikeImage from '../../img/bicicleta-background.png';
+import { useNavigate } from "react-router-dom";
 
 interface RouteDetailProps {
   route: BikeRoute;
 }
 
 const RouteDetail: React.FC<RouteDetailProps> = ({ route }) => {
+  const navigate = useNavigate();
+
+  const handleStart = () => {
+    navigate("/Mapa");
+  };
+
   return (
     <div className="route-detail">
-      <img src={bikeImage} alt="imagem de fundo"className="route-image" />
-    <div className="route-title"> 
+      <img src={bikeImage} alt="imagem de fundo" className="route-image" />
+      
+      <div className="route-title"> 
         <h2>{route.title}</h2>
-    </div>
+      </div>
+
       <div className="route-content">
-        
         <div className="route-left">
           <p><strong>Distância:</strong> {route.distance}</p>
           <p><strong>Nível:</strong> {route.level}</p>
@@ -28,15 +36,15 @@ const RouteDetail: React.FC<RouteDetailProps> = ({ route }) => {
         <div className="route-right">
           <p>{route.description}</p>
         </div>
-        
-        </div>
-        <div className="route-button">
-            <button className="start-button">INICIAR</button>
-        </div>
+      </div>
+
+      <div className="route-button">
+        <button className="start-button" onClick={handleStart}>
+          INICIAR
+        </button>
+      </div>
     </div>
   );
 };
 
 export default RouteDetail;
-
-

@@ -1,12 +1,19 @@
 import React from 'react';
 import { BikeRoute } from '../BikeRouteData/BikeRouteData';
 import './BikeRouteCard.css';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   route: BikeRoute;
 }
 
 const BikeRouteCard: React.FC<Props> = ({ route }) => {
+  const navigate = useNavigate();
+
+  const handleVerMais = () => {
+    navigate('/Mapa');
+  };
+
   return (
     <div className="card">
       <h2 className="card-title">{route.title}</h2>
@@ -21,7 +28,9 @@ const BikeRouteCard: React.FC<Props> = ({ route }) => {
         </div>
         <div className="card-description-area">
           <p className="card-description">{route.description}</p>
-          <button className="card-button">Ver mais</button>
+          <button className="card-button" onClick={handleVerMais}>
+            Ver mais
+          </button>
         </div>
       </div>
     </div>

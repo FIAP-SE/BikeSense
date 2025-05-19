@@ -81,12 +81,6 @@ body {
   box-sizing: border-box;
 }
 
-.grupo-info {
-  text-align: left;
-  flex: 1 1 60%;
-  color: white;
-}
-
 .grupo-info > strong {
   display: block;
   margin-bottom: 0.5rem;
@@ -99,7 +93,7 @@ body {
   color: white;
 }
 
-strong {
+.nome-info {
   color: white;
 }
 

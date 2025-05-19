@@ -104,12 +104,12 @@ const CriarGrupo: React.FC = () => {
           <div className="grupo-card" key={index}>
             <div className="grupo-info">
               <strong>{grupo.nomeGrupo}</strong>
-              <p><strong>Origem:</strong> {grupo.origem}</p>
-              <p><strong>Destino:</strong> {grupo.destino}</p>
-              <p><strong>Dia:</strong> {obterDiaSemana(grupo.data)} ({formatarData(grupo.data)})</p>
-              <p><strong>Horário:</strong> {grupo.horario}</p>
-              <p><strong>Nível:</strong> {grupo.nivel}</p>
-              <p><strong>Tipo:</strong> {grupo.tipo}</p>
+              <p><strong className="nome-info">Origem:</strong> {grupo.origem}</p>
+              <p><strong className="nome-info">Destino:</strong> {grupo.destino}</p>
+              <p><strong className="nome-info">Dia:</strong> {obterDiaSemana(grupo.data)} ({formatarData(grupo.data)})</p>
+              <p><strong className="nome-info">Horário:</strong> {grupo.horario}</p>
+              <p><strong className="nome-info">Nível:</strong> {grupo.nivel}</p>
+              <p><strong className="nome-info">Tipo:</strong> {grupo.tipo}</p>
             </div>
             <div className="grupo-extra">
               <p className="comentario">Comentário: {grupo.comentarios}</p>
